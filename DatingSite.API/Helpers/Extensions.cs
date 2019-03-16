@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Http;
 
 namespace DatingSite.API.Helpers
@@ -11,5 +12,13 @@ namespace DatingSite.API.Helpers
             response.Headers.Add("Access-Control-Allow-Origin", "*");
         }
 
+        public static int AgeClac(this DateTime DateofBirth)
+        {
+            var age = DateTime.Today.Year - DateofBirth.Year;
+            if (DateofBirth.AddYears(age) > DateTime.Today)
+                age--;
+
+            return age;
+        }
     }
 }

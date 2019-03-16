@@ -1,16 +1,15 @@
 using System;
 using System.Collections.Generic;
+using DatingSite.API.Models;
 
-namespace DatingSite.API.Models
+namespace DatingSite.API.DTOS
 {
-    public class User
+    public class UserForDetailed
     {
         public int Id { get; set; }
         public string Username { get; set; }
-        public byte[] Passwordshash { get; set; }
-        public byte[] Passwordsalt { get; set; }
         public string Gender { get; set; }
-        public DateTime DateofBirth { get; set; }
+        public int Age { get; set; }
         public string KnownAs { get; set; }
         public DateTime Created { get; set; }
         public DateTime LastActive { get; set; }
@@ -19,7 +18,8 @@ namespace DatingSite.API.Models
         public string Interests { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-        public ICollection<Photo> Photos { get; set; }
-        
+        public string photourl { get; set; }
+        public ICollection<PhotosForDetailedDTO> Photos { get; set; }
+
     }
 }
