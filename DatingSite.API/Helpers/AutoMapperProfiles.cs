@@ -30,6 +30,9 @@ namespace DatingSite.API.Helpers
                 opt.MapFrom(d => d.DateofBirth.AgeClac());
             });
             CreateMap<Photo, PhotosForDetailedDTO>();
+            CreateMap<UserForUpdateDto, User>();
+
+
         }
     }
 }
